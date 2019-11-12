@@ -22,3 +22,4 @@ sudo useradd -p $(openssl passwd -1 "$1") --shell /usr/sbin/nologin proxy
 sudo ufw allow 8080
 sudo systemctl restart danted
 sudo systemctl enable danted
+sudo systemctl status danted
