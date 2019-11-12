@@ -19,6 +19,7 @@ socks pass {
 }" | sudo tee /etc/danted.conf
 
 sudo useradd -p $(openssl passwd -1 "$1") --shell /usr/sbin/nologin proxy
+sudo apt install ufw
 sudo ufw allow 8080
 sudo systemctl restart danted
 sudo systemctl enable danted
